@@ -1,0 +1,104 @@
+/* Global styles
+------------------------------------*/
+html {
+    box-sizing: border-box;
+    /* background: #EEE; */
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+a {
+  color: black;
+}
+a:hover {
+  color: white;
+  text-decoration: italic;
+}
+h1 {
+  font-size: 50px;
+  line-height: 1;
+  font-style: 'Roboto Mono', monospace
+}
+h2 {
+  font-size: 25px;
+  font-style: 'Roboto Mono', monospace
+}
+h3 {
+  font-size: 15px;
+}
+body {
+  display: flex;
+}
+/* grid + background colors */
+.container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  grid-gap: 0px;
+  grid-template-areas:
+   "about about"
+   "work work"
+   "projects education"
+   "footer footer ";
+  min-height: 100vh;
+}
+.about {
+  grid-area: about;
+  background: #e63946;
+  color: #f1faee;
+  margin: 0;
+  padding: 10px;
+  font-family: 'Roboto Mono', monospace;
+  line-height: 1.5;
+
+}
+.work {
+  grid-area: work;
+  background: tan;
+  color: #1d3557;
+  margin: 0;
+  padding: 10px;
+  font-family: 'Roboto', sans-serif;;
+  line-height: 1.5;
+}
+.projects {
+  grid-area: projects;
+  background: #a8dadc;
+  color: #1d3557;
+  margin: 0;
+  padding: 10px;
+  font-family: 'Roboto', sans-serif;;
+  line-height: 1.5;
+}
+
+.edu {
+  grid-area: edu;
+  background: #457b9d;
+  color: #1d3557;
+  margin: 0;
+  padding: 10px;
+  font-family: 'Roboto', sans-serif;;
+  font-size: 25px;
+  line-height: 1.5;
+}
+.footer {
+  grid-area: footer;
+  background: #1d3557;
+  color: #f1faee;
+  margin: 0;
+  padding: 10px;
+  font-family: 'Roboto', sans-serif;;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-list {
+  list-style-type: none;
+  padding: 0;
+}
+  .contact-list a {
+    padding: 15px;
+    display: inline-block;
+  }
+}
