@@ -1,0 +1,236 @@
+body {
+    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    color: #fff;
+}
+a, a:hover, a:visited, a:active {
+    color: #fff;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/**********/
+/* Layout */
+/**********/
+aside, footer, header, nav, section{
+    display: flex;
+    flex-direction: column;
+}
+body {
+    overflow: hidden;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 250px auto;
+    grid-template-rows: auto 100px;
+    grid-template-areas:
+       "left main"
+       "bottom bottom";
+    height: 100vh;
+}
+aside {
+    background-color: black;
+    grid-area: left;
+    display: flex;
+}
+
+.Spotify {
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.homeicon {
+  margin-left: 15px;
+  margin-bottom: 20px;
+}
+.searchicon {
+  margin-left: 15px;
+  margin-bottom: 20px;
+}
+.listening {
+  margin-left: 15px;
+}
+
+header {
+    background: #111;
+    width: calc(100vw - 250px);
+    margin-top: 20px;
+    left: 250px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-content: flex-end;
+}
+
+#featured-content{
+  display: flex;
+  flex-wrap: wrap;
+}
+.artist-card{
+  width: 20%;
+  padding: 10px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 100px;
+}
+.image-div {
+  background-size: cover;
+}
+.artist-card > div {
+  border: solid 1px #303030;
+  padding: 10px;
+  border-radius: 25px;
+  background-color: #303030;
+
+}
+
+
+main {
+    background: #111;
+    grid-area: main;
+    min-height: calc(350px);
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    z-index: 3;
+}
+
+nav {
+    height: 30px;
+    margin-top: 100px;
+    background: #111;
+    width: calc(100vw - 250px);
+    left: 250px;
+    display: flex;
+    flex-flow: wrap;
+    align-items: flex-start;
+    grid-area: menu;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    color: white;
+    z-index: 101;
+    padding: 10px;
+}
+
+#upgrade {
+  border: solid 1px grey;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+#profile {
+  border: solid 1px grey;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+.playlists {
+  margin-right: 30px;
+}
+.albums {
+  margin-right: 30px;
+}
+.artists {
+  hover: underline
+}
+
+footer {
+    background: #222;
+    grid-area: bottom;
+    border: solid 1px grey;
+    padding: 10px;
+    border-radius: 5px;
+}
+#upgrade:hover {
+  opacity: 0.8;
+}
+#profile:hover {
+  opacity: 0.8;
+}
+
+.homeicon:hover {
+  opacity: 0.8;;
+}
+.searchicon:hover {
+  opacity: 0.8;;
+}
+.listening:hover {
+  opacity: 0.8;;
+}
+
+.artist-card:hover > div {
+  border: solid 1px black;
+}
+.artist-card:hover .image-div{
+  opacity: 0.8;
+}
+
+.artist-card:hover .play-button{
+  display: flex;
+}
+.artist-card:hover .caption{
+  color: green;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 1200px) {
+  .artist-card {
+    width: 33.3%;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .artist-card {
+    width: 50%;
+    padding: 10px;
+  }
+  .image-div {
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .artist-card {
+    width: 100%;
+  }
+  .image-div {
+    height: 450px;
+  }
+  body {
+      overflow: hidden;
+      margin: 0px;
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto 100px;
+      grid-template-areas:
+         "main"
+         "bottom";
+      height: 100vh;
+  }
+  aside {
+    display: none;
+  }
+}
+
+/***************************/
+/* Accessories & Florishes */
+/***************************/
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 4px solid transparent;
+    border-radius: 16px;
+    background-clip: padding-box;
+    min-height: 30px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: hsla(0,0%,100%,.3);
+}
