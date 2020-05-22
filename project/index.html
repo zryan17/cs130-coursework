@@ -1,0 +1,29 @@
+<div class="landing">
+    <div class="landing-jumbotron">
+    <h1> Welcome to YouPrefer <span>.</span></h1>
+    <p>Learn more about your unique tastes and compare them to others' with YouPrefer.</p>
+    <a ng-if="mobileDetected == false" href="/login" class="">
+      Log in with YouTube
+    </a>
+    <a ng-if="mobileDetected == true" href="/mobile_login" class="">
+      Log in with YouTube
+    </a>
+    </div>
+  </div>
+
+  <div class="container landing-info">
+     <div class="row">
+        <div class="col-sm-4 col-xs-12 landing-info-box">
+          <h4>Top Channels</h4>
+          <p>The top 5 channels you have subscribed to, or just keep coming back to.</p>
+        </div>
+        <div class="col-sm-4 col-xs-12 landing-info-box">
+          <h4>Top Genres</h4>
+          <p>The types of videos you love! From financial podcasts to puppy compilations, your top video genres will be displayed for you!</p>
+        </div>
+        <div class="col-sm-4 col-xs-12 landing-info-box">
+          <h4>Recommendations</h4>
+          <p>We hope to broaden your horizons on YouTube using your preferences to curate a list of videos to watch and channels to visit.</p>
+        </div>
+      </div>
+    </div>
